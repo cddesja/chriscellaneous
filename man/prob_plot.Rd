@@ -4,9 +4,11 @@
 \alias{prob_plot}
 \title{Makes univariate probability plots}
 \usage{
-prob_plot(x, outcome, xlab)
+prob_plot(mod, x, outcome, xlab, ylab)
 }
 \arguments{
+\item{mod}{the model}
+
 \item{x}{is the independent variable}
 
 \item{outcome}{the dependent variable}
