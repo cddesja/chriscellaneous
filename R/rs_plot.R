@@ -9,6 +9,7 @@
 #' @param xlab The label for the x-axis
 #' @param ylab The label for the y-axis
 #' @param plot.jn Logical. Shoud we plot the points when the interaction is significantly different than zero?
+#' @export
 rs_plot <- function(mod, predictor, moderator, lb, ub, xlab, ylab, plot.jn = FALSE){
   z1 = lb
   z2 = ub

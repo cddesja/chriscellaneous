@@ -3,6 +3,7 @@
 #' @param xlab is the x-axis label
 #' @param ylab is the x-axis label
 #' @param outcome the dependent variable
+#' @export
 prob_plot <- function(x, outcome, xlab){
   resp <- seq(min(x, na.rm = T), max(x, na.rm = T), by = .1)
   pred <- exp(coef(mod0)[[1]] + coef(mod0)[[2]]*resp) / (1 + exp(coef(mod0)[[1]] + coef(mod0)[[2]]*resp))
