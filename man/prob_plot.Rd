@@ -4,14 +4,16 @@
 \alias{prob_plot}
 \title{Makes univariate probability plots}
 \usage{
-prob_plot(x, outcome, lab)
+prob_plot(x, outcome, xlab)
 }
 \arguments{
 \item{x}{is the independent variable}
 
 \item{outcome}{the dependent variable}
 
-\item{lab}{is the x-axis label}
+\item{xlab}{is the x-axis label}
+
+\item{ylab}{is the x-axis label}
 }
 \description{
 Makes univariate probability plots
