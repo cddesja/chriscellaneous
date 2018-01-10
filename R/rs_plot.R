@@ -19,7 +19,7 @@ rs_plot <- function(mod, predictor, moderator, lb, ub, xlab, ylab, plot.jn = FAL
   slope <- coefs[grep(":", names(coefs))]
   tstat <- qt(.975, mod$df.residual)
   var.pred <- vcov(mod)[match(predictor, colnames(vcov(mod))),match(predictor, colnames(vcov(mod)))]
-  cov.predint <- vcov(mod)[grep(":", colnames(vcov(mod))), pred.loc]
+  cov.predint <- vcov(mod)[grep(":", colnames(vcov(mod))), match(predictor, colnames(vcov(mod)))]
   var.int <- vcov(mod)[grep(":", colnames(vcov(mod))),grep(":", colnames(vcov(mod)))]
   y.upper <- (int + slope * z) + (tstat * sqrt(var.pred + (2 * z * cov.predint) + ((z ^ 2) * var.int)))
   y.lower <- (int + slope * z) - (tstat * sqrt(var.pred + (2 * z * cov.predint) + ((z ^ 2) * var.int)))
